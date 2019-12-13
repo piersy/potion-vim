@@ -46,4 +46,10 @@ syntax match potionNumber "\v0x[0-9a-f]+>"
 
 highlight link potionNumber Number
 
+syntax region potionString start=/\v"/ end=/\v"/
+" Potion allows a double single quote to mean a literal single quote in a
+" single quoted string.
+syntax region potionString start=/\v'/ skip=/''/ end=/\v'/
+highlight link potionString String
+
 let b:current_syntax = "potion"
