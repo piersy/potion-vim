@@ -36,4 +36,14 @@ syntax match potionFieldDef "\v/.{-1,}>"
 " to Cyan
 highlight potionFieldDef ctermfg=Cyan
 
+" Matches numbers of the form  2, 123.23, 1e-2, and 1.9956e+2.
+" Look for 1 or more digits then an optional dot followed by one or more
+" digits followed by an optional final segment consisting of e then (+ or -)
+" and one or more digits followed by a word boundary.
+syntax match potionNumber "\v\d+\.=\d{-}(e(-|\+)\d+)=>" 
+" Match hex numbers
+syntax match potionNumber "\v0x[0-9a-f]+>" 
+
+highlight link potionNumber Number
+
 let b:current_syntax = "potion"
