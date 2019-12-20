@@ -1,0 +1,61 @@
+*potion.txt* functionality for the potion programming language
+
+                      ___      _   _              ~
+                     / _ \___ | |_(_) ___  _ __   ~
+                    / /_)/ _ \| __| |/ _ \| '_ \  ~
+                   / ___/ (_) | |_| | (_) | | | | ~
+                   \/    \___/ \__|_|\___/|_| |_| ~
+
+          Functionality for the Potion programming language.
+        Includes syntax highlighting, code folding, and more!
+
+====================================================================
+CONTENTS                                            *PotionContents*
+
+    1. Usage ................ |PotionUsage|
+    2. Mappings ............. |PotionMappings|
+    3. License .............. |PotionLicense|
+    4. Contributing ......... |PotionContributing|
+    5. Credits .............. |PotionCredits|
+
+====================================================================
+
+Section 1: Usage                                    *PotionUsage*
+
+This plugin will automatically provide syntax highlighting and code
+folding for Potion files (files ending in .pn).
+
+It overrides the section text object motions [], [[, ]], ][ such
+that they make sense for a potion file.
+
+It also provides functionality to run potions programs from vim and
+compile and display the bytecode of a potion program in a new
+window.
+
+====================================================================
+Section 2: Mappings                                 *PotionMappings*
+
+Potion defines the following mappings by default. Feel free to
+override them with any mappings you prefer.
+>
+	nnoremap <buffer> <localleader>r :call potion#running#PotionCompileAndRunFile()<cr>
+
+ 	nnoremap <buffer> <localleader>b :call potion#running#PotionShowBytecode()<cr>
+
+====================================================================
+Section 3: License                                  *PotionLicense*
+
+This plugin uses the MIT license see the file LICENSE for details.
+
+
+====================================================================
+Section 4: Contributing                             *PotionContributing*
+
+This plugin is not maintained, so if you want to contribute then
+please create your own fork and contribute to that.
+
+====================================================================
+Section 5: Credits                                  *PotionCredits*
+
+Steve losh of http://stevelosh.com for providing the tutorial that
+this plugin is based on http://learnvimscriptthehardway.stevelosh.com
